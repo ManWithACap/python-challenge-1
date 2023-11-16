@@ -212,7 +212,7 @@ for item in order:
     print(f"{name}{n_spaces}|{price}{p_spaces}|{quantity}{q_spaces}")
 
 # 11. Calculate the cost of the order using list comprehension
-cost = sum(i['Price'] for i in order)
+cost = float(sum(i['Price'] * float(i['Qty']) for i in order))
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
 print(f"Your total comes out to: {cost}!")
